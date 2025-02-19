@@ -4,15 +4,15 @@ const questions = [
     questionText: "כמה חודשים נמשכה מלכות יהויכין?",
     choices: ["3 חודשים", "5 חודשים", "12 חודשים", "18 חודשים"],
     correct: 0,
-    image: "images/תמונה1.jpg",
-    audio: "audio/קובץ-שמע.mp3"
+    image: "images/tmuna1.jpg",
+    audio: "audio/sound1.mp3"
   },
   {
     questionText: "מי נבחר מלך יהודה לאחר גלות יהויכין?",
     choices: ["יהויכין", "צדקיהו", "יהויקים", "מלכים"],
     correct: 1,
-    image: "images/תמונה2.jpg",
-    audio: "audio/קובץ-שמע.mp3"
+    image: "images/tmuna2.jpg",
+    audio: "audio/sound1.mp3"
   },
   {
     questionText: "מהו המסר העיקרי בפרק זה?",
@@ -23,8 +23,8 @@ const questions = [
       "תחילת תקופה של שגשוג"
     ],
     correct: 0,
-    image: "images/תמונה3.jpg",
-    audio: "audio/קובץ-שמע.mp3"
+    image: "images/tmuna3.jpg",
+    audio: "audio/sound1.mp3"
   }
 ];
 
@@ -61,7 +61,7 @@ function startGame() {
   
   // אתחול נגן השמע – אם כל השאלות משתמשות באותו קובץ שמע,
   // מספיק להגדיר אותו פעם אחת.
-  backgroundAudio.src = "audio/קובץ-שמע.mp3";
+  backgroundAudio.src = "audio/sound1.mp3";
   backgroundAudio.play();
   
   showQuestion();

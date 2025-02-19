@@ -3,14 +3,14 @@ const questions = [
     questionText: "כמה חודשים נמשכה מלכות יהויכין?",
     choices: ["3 חודשים", "5 חודשים", "12 חודשים", "18 חודשים"],
     correct: 0,
-    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna1.jpg",
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
     questionText: "מי נבחר מלך יהודה לאחר גלות יהויכין?",
     choices: ["יהויכין", "צדקיהו", "יהויקים", "מלכים"],
     correct: 1,
-    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna3.jpg",
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
@@ -22,10 +22,25 @@ const questions = [
       "תחילת תקופה של שגשוג"
     ],
     correct: 0,
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna4.jpg",
+    audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
+  },
+  {
+    questionText: "שאלה לדוגמה רביעית",
+    choices: ["תשובה א", "תשובה ב", "תשובה ג", "תשובה ד"],
+    correct: 1,
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna5.jpg",
+    audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
+  },
+  {
+    questionText: "שאלה לדוגמה חמישית",
+    choices: ["תשובה א", "תשובה ב", "תשובה ג", "תשובה ד"],
+    correct: 2,
     image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   }
 ];
+
 
 let currentQuestionIndex = 0;
 let score = 0;

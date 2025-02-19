@@ -1,18 +1,18 @@
-// מערך השאלות – משתמשים בנתיבים יחסיים לתמונות ושמע
+// מערך השאלות – נתיבים מעודכנים (tmuna.jpg / sound.mp3)
 const questions = [
   {
     questionText: "כמה חודשים נמשכה מלכות יהויכין?",
     choices: ["3 חודשים", "5 חודשים", "12 חודשים", "18 חודשים"],
     correct: 0,
-    image: "images/tmuna1.jpg",
-    audio: "audio/sound1.mp3"
+    image: "images/tmuna.jpg",
+    audio: "audio/sound.mp3"
   },
   {
     questionText: "מי נבחר מלך יהודה לאחר גלות יהויכין?",
     choices: ["יהויכין", "צדקיהו", "יהויקים", "מלכים"],
     correct: 1,
-    image: "images/tmuna2.jpg",
-    audio: "audio/sound1.mp3"
+    image: "images/tmuna.jpg",
+    audio: "audio/sound.mp3"
   },
   {
     questionText: "מהו המסר העיקרי בפרק זה?",
@@ -23,8 +23,8 @@ const questions = [
       "תחילת תקופה של שגשוג"
     ],
     correct: 0,
-    image: "images/tmuna3.jpg",
-    audio: "audio/sound1.mp3"
+    image: "images/tmuna.jpg",
+    audio: "audio/sound.mp3"
   }
 ];
 
@@ -59,16 +59,15 @@ function startGame() {
   currentQuestionIndex = 0;
   score = 0;
   
-  // אתחול נגן השמע – אם כל השאלות משתמשות באותו קובץ שמע,
-  // מספיק להגדיר אותו פעם אחת.
-  backgroundAudio.src = "audio/sound1.mp3";
+  // אתחול נגן השמע
+  backgroundAudio.src = "audio/sound.mp3";
   backgroundAudio.play();
   
   showQuestion();
 }
 
 function showQuestion() {
-  // הצגת מסך השאלה והסתרת מסך התוצאה
+  // הסתרת מסך התוצאה והצגת מסך השאלה
   resultScreen.style.display = "none";
   questionScreen.style.display = "block";
   
@@ -87,7 +86,7 @@ function showQuestion() {
 }
 
 function checkAnswer(selectedIndex) {
-  // מניעת לחיצות נוספות על אפשרויות התשובה
+  // מניעת לחיצות נוספות
   const buttons = choicesEl.querySelectorAll("button");
   buttons.forEach(btn => btn.disabled = true);
   
@@ -99,7 +98,7 @@ function checkAnswer(selectedIndex) {
     resultMessageEl.textContent = "תשובה לא נכונה.";
   }
   
-  // מעבר למסך התוצאה (המוזיקה ממשיכה להתנגן ברקע)
+  // מעבר למסך התוצאה
   questionScreen.style.display = "none";
   resultScreen.style.display = "block";
 }
@@ -116,9 +115,11 @@ function nextQuestion() {
 function showFinalScreen() {
   resultScreen.style.display = "none";
   finalScreen.style.display = "block";
-  finalScreen.querySelector("p").textContent = `סיימת את המשחק! מספר התשובות הנכונות: ${score} מתוך ${questions.length}.`;
   
-  // אם תרצה להפסיק את השמע בסיום המשחק, בטל הסימון כאן:
+  finalScreen.querySelector("p").textContent =
+    `סיימת את המשחק! מספר התשובות הנכונות: ${score} מתוך ${questions.length}.`;
+  
+  // אפשר לעצור את השמע כאן אם רוצים:
   // backgroundAudio.pause();
 }
 

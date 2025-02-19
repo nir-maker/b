@@ -1,18 +1,17 @@
-// מערך השאלות – נתיבים מעודכנים (tmuna.jpg / sound.mp3)
 const questions = [
   {
     questionText: "כמה חודשים נמשכה מלכות יהויכין?",
     choices: ["3 חודשים", "5 חודשים", "12 חודשים", "18 חודשים"],
     correct: 0,
-    image: "images/tmuna.jpg",
-    audio: "audio/sound.mp3"
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
+    audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
     questionText: "מי נבחר מלך יהודה לאחר גלות יהויכין?",
     choices: ["יהויכין", "צדקיהו", "יהויקים", "מלכים"],
     correct: 1,
-    image: "images/tmuna.jpg",
-    audio: "audio/sound.mp3"
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
+    audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
     questionText: "מהו המסר העיקרי בפרק זה?",
@@ -23,8 +22,8 @@ const questions = [
       "תחילת תקופה של שגשוג"
     ],
     correct: 0,
-    image: "images/tmuna.jpg",
-    audio: "audio/sound.mp3"
+    image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
+    audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   }
 ];
 
@@ -59,8 +58,8 @@ function startGame() {
   currentQuestionIndex = 0;
   score = 0;
   
-  // אתחול נגן השמע
-  backgroundAudio.src = "audio/sound.mp3";
+  // אתחול נגן השמע לשאלה הראשונה
+  backgroundAudio.src = questions[currentQuestionIndex].audio;
   backgroundAudio.play();
   
   showQuestion();
@@ -106,6 +105,9 @@ function checkAnswer(selectedIndex) {
 function nextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
+    // עדכון השמע לשאלה הבאה
+    backgroundAudio.src = questions[currentQuestionIndex].audio;
+    backgroundAudio.play();
     showQuestion();
   } else {
     showFinalScreen();

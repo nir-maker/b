@@ -38,8 +38,3 @@ img {
   height: auto;
   margin-bottom: 20px;
 }
-
-/* ניתן להתאים גם את סגנון נגן השמע, לדוגמה: */
-#audio-container {
-  margin-top: 20px;
-}

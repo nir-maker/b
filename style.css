@@ -1,45 +1,77 @@
+/* עיצוב כללי והתאמה לרספונסיביות */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f0f0f0;
-  direction: rtl;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  direction: rtl;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
 }
 
+/* עיצוב מכולת המשחק */
 #game-container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 20px auto;
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* עיצוב המסכים */
 .screen {
   margin: 20px 0;
 }
 
+/* עיצוב כפתורים */
 button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4facfe;
+  color: #fff;
+  transition: background-color 0.3s;
 }
 
+button:hover {
+  background-color: #00f2fe;
+}
+
+/* עיצוב אפשרויות השאלה */
 #choices button {
   display: block;
   width: 80%;
   margin: 10px auto;
 }
 
+/* סימון תשובות נכונות ושגויות */
+button.correct {
+  background-color: #28a745 !important;
+}
+
+button.wrong {
+  background-color: #dc3545 !important;
+}
+
+/* עיצוב תמונות */
 img {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
-/* סגנון לנגן השמע (אופציונלי) */
-#background-audio {
-  margin-top: 20px;
+/* התאמה לנייד */
+@media (max-width: 600px) {
+  #game-container {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  button {
+    width: 90%;
+    font-size: 18px;
+  }
 }

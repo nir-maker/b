@@ -100,22 +100,23 @@ function showQuestion() {
 }
 
 function checkAnswer(selectedIndex) {
-  // מניעת לחיצות נוספות
+  // מניעת לחיצות נוספות לאחר בחירה
   const buttons = choicesEl.querySelectorAll("button");
   buttons.forEach(btn => btn.disabled = true);
   
   const currentQuestion = questions[currentQuestionIndex];
   if (selectedIndex === currentQuestion.correct) {
     score++;
-    resultMessageEl.textContent = "תשובה נכונה!";
+    // אם התשובה נכונה – ממשיכים אוטומטית
+    nextQuestion();
   } else {
+    // תשובה שגויה – מציגים את מסך התוצאה
     resultMessageEl.textContent = "תשובה לא נכונה.";
+    questionScreen.style.display = "none";
+    resultScreen.style.display = "block";
   }
-  
-  // מעבר למסך התוצאה
-  questionScreen.style.display = "none";
-  resultScreen.style.display = "block";
 }
+
 
 function nextQuestion() {
   currentQuestionIndex++;

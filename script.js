@@ -105,19 +105,19 @@ function checkAnswer(selectedIndex) {
   buttons.forEach(btn => btn.disabled = true);
   
   const currentQuestion = questions[currentQuestionIndex];
+  
+  // אם התשובה נכונה:
   if (selectedIndex === currentQuestion.correct) {
     score++;
-    // אם התשובה נכונה – ממשיכים אוטומטית
+    // מעבר ישיר לשאלה הבאה
     nextQuestion();
   } else {
-    // תשובה שגויה – מציגים את מסך התוצאה
+    // אם התשובה שגויה, מציגים מסך תוצאה
     resultMessageEl.textContent = "תשובה לא נכונה.";
     questionScreen.style.display = "none";
     resultScreen.style.display = "block";
   }
 }
-
-
 function nextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {

@@ -1,3 +1,4 @@
+// מערך השאלות - החלפנו את שאלות 4 ו-5 בשאלות חדשות
 const questions = [
   {
     questionText: "כמה חודשים נמשכה מלכות יהויכין?",
@@ -26,16 +27,28 @@ const questions = [
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
-    questionText: "שאלה לדוגמה רביעית",
-    choices: ["תשובה א", "תשובה ב", "תשובה ג", "תשובה ד"],
+    // שאלה חדשה מספר 4
+    questionText: "מדוע נבוכדנצר החליף את המלוכה ומינה את מתניה (צדקיהו)?",
+    choices: [
+      "כדי להשמיד את הממלכה מיד",
+      "כדי למנות מלך נאמן שימלא את רצון הבבלים",
+      "כדי לגמול לו על נאמנותו לאל",
+      "כדי להגן על ירושלים מפני מצרים"
+    ],
     correct: 1,
     image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna5.jpg",
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
-    questionText: "שאלה לדוגמה חמישית",
-    choices: ["תשובה א", "תשובה ב", "תשובה ג", "תשובה ד"],
-    correct: 2,
+    // שאלה חדשה מספר 5
+    questionText: "מה הסיבה העיקרית לחורבן ירושלים לפי הפרק?",
+    choices: [
+      "חטאי המלכים והעם שהביאו לעונש אלוהי",
+      "חולשת הצבא היהודי לעומת הצבא הבבלי",
+      "הסכמים לא מוצלחים עם מצרים",
+      "רעב כבד שפקד את הארץ"
+    ],
+    correct: 0,
     image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   }

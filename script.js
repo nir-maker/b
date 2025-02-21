@@ -27,12 +27,11 @@ const questions = [
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   },
   {
-    // שאלה חדשה מספר 4
-    questionText: "מדוע נבוכדנצר החליף את המלוכה ומינה את מתניה (צדקיהו)?",
+      questionText: "מדוע נבוכדנצר החליף את המלוכה ומינה את מתניה (צדקיהו)?",
     choices: [
       "כדי להשמיד את הממלכה מיד",
       "כדי למנות מלך נאמן שימלא את רצון הבבלים",
-      "כדי לגמול לו על נאמנותו לאל",
+      "כדי לגמול לו על נאמנותו",
       "כדי להגן על ירושלים מפני מצרים"
     ],
     correct: 1,
@@ -41,14 +40,14 @@ const questions = [
   },
   {
     // שאלה חדשה מספר 5
-    questionText: "מה הסיבה העיקרית לחורבן ירושלים לפי הפרק?",
+   questionText: "מה הסיבה העיקרית לחורבן ירושלים לפי הפרק?",
     choices: [
       "חטאי המלכים והעם שהביאו לעונש אלוהי",
-      "חולשת הצבא היהודי לעומת הצבא הבבלי",
+      "חולשת הצבא היהודי לעומת הבבלים",
       "הסכמים לא מוצלחים עם מצרים",
       "רעב כבד שפקד את הארץ"
     ],
-    correct: 0,
+     correct: 0,
     image: "https://raw.githubusercontent.com/nir-maker/b/main/images/tmuna.jpg",
     audio: "https://raw.githubusercontent.com/nir-maker/b/main/audio/sound.mp3"
   }

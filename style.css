@@ -1,45 +1,121 @@
+/* Reset בסיסי */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   text-align: center;
-  background-color: #f0f0f0;
-  direction: rtl;
+  background: linear-gradient(135deg, #ece9e6, #ffffff);
   margin: 0;
   padding: 0;
+  direction: rtl;
+  color: #333;
 }
 
+/* מכולת המשחק */
 #game-container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 20px auto;
   background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+/* מסכים */
 .screen {
   margin: 20px 0;
 }
 
+/* אינדיקטור התקדמות */
+#progress-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#progress-text {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+progress {
+  width: 80%;
+  height: 20px;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 10px;
+}
+
+/* כפתורים */
 button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   margin: 10px;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
 }
 
+button:hover {
+  transform: scale(1.05);
+}
+
+/* כפתורי אפשרויות */
 #choices button {
   display: block;
   width: 80%;
   margin: 10px auto;
 }
 
+/* משוב חזותי – תשובה נכונה/שגויה */
+button.correct {
+  background-color: #4caf50 !important;
+}
+
+button.wrong {
+  background-color: #f44336 !important;
+}
+
+/* עיצוב תמונות */
 img {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
 
-/* סגנון לנגן השמע (אופציונלי) */
+/* עיצוב לנגן השמע */
 #background-audio {
   margin-top: 20px;
+}
+
+/* עיצוב רספונסיבי לתמיכה במכשירים ניידים */
+@media (max-width: 600px) {
+  #game-container {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+  
+  button {
+    width: 90%;
+    font-size: 18px;
+  }
+  
+  #progress-indicator {
+    width: 100%;
+  }
 }

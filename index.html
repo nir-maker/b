@@ -1,12 +1,21 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="he">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>משחק - חורבן יהודה בידי בבל</title>
+  <!-- הוספת גופנים מודרניים -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="game-container">
+    <!-- אינדיקטור התקדמות -->
+    <div id="progress-indicator">
+      <span id="progress-text">שאלה 1 מתוך 5</span>
+      <progress id="progress-bar" value="1" max="5"></progress>
+    </div>
+
     <!-- מסך פתיחה -->
     <div id="start-screen" class="screen">
       <h1>משחק חורבן יהודה בידי בבל</h1>
